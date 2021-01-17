@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SoftwaresCares\SuperBlog\Http\Controllers\LibraryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+
+Route::get('/', [LibraryController::class, 'mediaLibrary'])->name('medialibrary'); //Media Dashboard Display
 
